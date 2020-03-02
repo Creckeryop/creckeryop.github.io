@@ -4,7 +4,17 @@
     backdrop-filter: saturate(180%) blur(14px);
 }
 
-.column2 {
-    padding-left: 5%;
-    width: 40%;
+.column3 {
+    padding-left: 1.66666666667%;
+    padding-right: 1.66666666667%;
+    width: 33%;
+    text-align: center;
+}
+
+label {
+    font-size: 20px;
+}
+
+body {
+    background: rgba(233, 236, 239, 1)
 }

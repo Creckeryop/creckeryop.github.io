@@ -13,6 +13,28 @@ function getStars(repo_name, item, index) {
     });
 }
 
+var language_table = {
+    ["Lua"]: "blue",
+    ["C++"]: "red",
+    ["JavaScript"]: "yellow"
+};
+
+function getLanguage(repo_name, item, index) {
+    $.ajax({
+        url: "https://api.github.com/repos/creckeryop/" + repo_name,
+        type: "GET",
+        complete: function(jqXHR, status) {
+            if (status == "success") {
+                var result = jqXHR.responseText;
+                var trimmed = result.substring(0, result.lastIndexOf('"has_issues": '));
+                var trimmed2 = trimmed.substring(trimmed.lastIndexOf('"language": '), trimmed.lastIndexOf('",'));
+                item[index] = trimmed2.substring(trimmed2.lastIndexOf(':') + 3);
+                item.style.color = language_table[item[index]] || "black";
+            }
+        }
+    });
+}
+
 function getDownloads(repo_name, item, index) {
     $.ajax({
         url: "https://api.github.com/repos/creckeryop/" + repo_name + "/releases",
@@ -56,6 +78,7 @@ function get(repo_name, item, index) {
         }
     });
 }
+
 var star_counters = document.getElementsByClassName("star-counter");
 for (i = 0; i < star_counters.length; i++) {
     var item = star_counters.item(i);
@@ -67,4 +90,10 @@ for (i = 0; i < dwld_counters.length; i++) {
     var item = dwld_counters.item(i);
     var repo_name = item.id.substring(0, item.id.lastIndexOf("-"));
     getDownloads(repo_name, item, "innerHTML");
+}
+var lngg_counters = document.getElementsByClassName("project-language");
+for (i = 0; i < lngg_counters.length; i++) {
+    var item = lngg_counters.item(i);
+    var repo_name = item.id.substring(0, item.id.lastIndexOf("-"));
+    getLanguage(repo_name, item, "innerHTML");
 }
