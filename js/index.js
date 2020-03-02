@@ -6,16 +6,12 @@ let language_table = {
 
 function loadProjectInfo(repo, item) {
     let star_label = item.getElementsByClassName("star-counter").item(0);
-    let lngg_label = item.getElementsByClassName("project-language").item(0);
     $.ajax({
         url: "https://api.github.com/repos/creckeryop/" + repo,
         type: "GET",
         complete: function(jqXHR, status) {
             if (status == "success") {
-                let result = jqXHR.responseText;
-                star_label.innerHTML = /watchers_count": (.+),/.exec(result)[1];
-                lngg_label.innerHTML = /language": "(.+)",/.exec(result)[1];
-                lngg_label.style.color = language_table[lngg_label.innerHTML] || "black";
+                star_label.innerHTML = /watchers_count": (.+),/.exec(jqXHR.responseText)[1];
             }
         }
     });
@@ -48,6 +44,8 @@ function loadProjectsInfo() {
     for (; i < items.length; i++) {
         let item = items.item(i);
         loadProjectInfo(item.id, item);
+        let lng_label = item.getElementsByClassName("project-language").item(0);
+        lng_label.style.color = language_table[lng_label.innerHTML] || "black";
     }
 }
 

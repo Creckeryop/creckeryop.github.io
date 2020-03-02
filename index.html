@@ -32,7 +32,7 @@
     <main role="main">
         <div class="jumbotron text-center">
             <h1>Creckeryop</h1>
-            <p>Страница пользователя</p>
+            <p>Страница разработчика</p>
         </div>
         <h2 class="text-center pb-4"><a class="anchor" id="projects">Проекты</a></h2>
         <div class="container">
@@ -41,8 +41,11 @@
                     <div class="card mb-4 shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
                         <defs>
-                            <filter id="blur" x="0" y="0">
-                                <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+                            <filter id="blur" x="0" y="0" width="100%" height="100%">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+                                <feComponentTransfer>
+                                    <feFuncA type="discrete" tableValues="1 1"/>
+                                </feComponentTransfer>
                             </filter>
                         </defs>
                         <image preserveAspectRatio="xMidYMid slice" xlink:href="https://github.com/Creckeryop/NOBORU/raw/master/res/logo.png" width="100%" height="250" filter="url(#blur)"/> 
@@ -68,7 +71,7 @@
                                     <label class="download-counter">0</label>
                                 </div>
                                 <div class="column3">
-                                    <label class="project-language"></label>
+                                    <label class="project-language">Lua</label>
                                 </div>
                             </div>
                             <p>Приложние для чтения манги на PlayStation Vita™</p>
@@ -81,11 +84,6 @@
                 <div class="project-item col-md-4" id="PiCrest">
                     <div class="card mb-4 shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                        <defs>
-                            <filter id="blur" x="0" y="0">
-                              <feGaussianBlur in="SourceGraphic" stdDeviation="12" />
-                            </filter>
-                          </defs>
                         <image preserveAspectRatio="xMidYMid slice" xlink:href="https://user-images.githubusercontent.com/25725992/43686295-59ed2c32-98dc-11e8-90d6-0b241bbf147d.png" width="100%" height="250" filter="url(#blur)"/> 
                         <image preserveAspectRatio="xMidYMid meet" xlink:href="https://user-images.githubusercontent.com/25725992/43686295-59ed2c32-98dc-11e8-90d6-0b241bbf147d.png" width="100%" height="250"/> 
                     </svg>
@@ -109,7 +107,7 @@
                                     <label class="download-counter">0</label>
                                 </div>
                                 <div class="column3">
-                                    <label class="project-language"></label>
+                                    <label class="project-language">Lua</label>
                                 </div>
                             </div>
                             <p>Игра в жанре головоломки на PlayStation Vita™</p>
@@ -119,16 +117,49 @@
                         </div>
                     </div>
                 </div>
+                <div class="project-item col-md-4" id="MSweep">
+                    <div class="card mb-4 shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                        <image preserveAspectRatio="xMidYMid slice" xlink:href="https://github.com/Creckeryop/MSweep/blob/master/screenshots/logo.png?raw=true" width="100%" height="250" filter="url(#blur)"/> 
+                        <image preserveAspectRatio="xMidYMid meet" xlink:href="https://github.com/Creckeryop/MSweep/blob/master/screenshots/logo.png?raw=true" width="100%" height="250"/> 
+                    </svg>
+                        <h5 class="card-header">
+                            MSweep
+                        </h5>
+                        <div class="card-body pb-0">
+                            <div class="row">
+                                <div class="column3">
+                                    <svg width="1.5em" height="1.5em" viewBox="0 3 20 20" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.612 17.443c-.386.198-.824-.149-.746-.592l.83-4.73-3.522-3.356c-.33-.314-.16-.888.282-.95l4.898-.696 2.184-4.327c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L10 15.187l-4.389 2.256z"></path>
+                                    </svg>
+                                    <label class="star-counter">0</label>
+                                </div>
+                                <div class="column3">
+                                    <svg width="1.5em" height="1.5em" viewBox="0 3 20 20" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M2.5 10a.5.5 0 01.5.5V14a1 1 0 001 1h12a1 1 0 001-1v-3.5a.5.5 0 011 0V14a2 2 0 01-2 2H4a2 2 0 01-2-2v-3.5a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd" d="M7 9.5a.5.5 0 01.707 0L10 11.793 12.293 9.5a.5.5 0 01.707.707l-2.646 2.647a.5.5 0 01-.708 0L7 10.207A.5.5 0 017 9.5z" clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd" d="M10 3a.5.5 0 01.5.5v8a.5.5 0 01-1 0v-8A.5.5 0 0110 3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <label class="download-counter">0</label>
+                                </div>
+                                <div class="column3">
+                                    <label class="project-language">C++</label>
+                                </div>
+                            </div>
+                            <p>Игра сапёр для PlayStation Vita™</p>
+                        </div>
+                        <div class="card-body text-right pt-0">
+                            <a class="btn btn-outline-dark" href="https://github.com/Creckeryop/MSweep">Перейти на GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="project-item col-md-4" id="Flappy-Bird-Classic-vita">
                     <div class="card mb-4 shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                        <defs>
-                            <filter id="blur" x="0" y="0">
-                              <feGaussianBlur in="SourceGraphic" stdDeviation="12" />
-                            </filter>
-                          </defs>
-                        <image preserveAspectRatio="xMidYMid slice" xlink:href="https://raw.githubusercontent.com/Creckeryop/Flappy-Bird-Classic-vita/master/sce_sys/livearea/contents/bg.png" width="100%" height="250" filter="url(#blur)"/> 
-                        <image preserveAspectRatio="xMidYMid meet" xlink:href="https://raw.githubusercontent.com/Creckeryop/Flappy-Bird-Classic-vita/master/sce_sys/livearea/contents/bg.png" width="100%" height="250"/> 
+                        <image preserveAspectRatio="xMidYMid slice" xlink:href="https://raw.githubusercontent.com/Creckeryop/Flappy-Bird-Classic-vita/master/sce_sys/icon0.png" width="100%" height="250" filter="url(#blur)"/> 
+                        <image preserveAspectRatio="xMidYMid meet" xlink:href="https://raw.githubusercontent.com/Creckeryop/Flappy-Bird-Classic-vita/master/sce_sys/icon0.png" width="100%" height="250"/> 
                     </svg>
                         <h5 class="card-header">
                             Flappy Bird Classic
@@ -150,7 +181,7 @@
                                     <label class="download-counter">0</label>
                                 </div>
                                 <div class="column3">
-                                    <label class="project-language"></label>
+                                    <label class="project-language">C++</label>
                                 </div>
                             </div>
                             <p>Клон известного таймкиллера для PlayStation Vita™</p>
@@ -160,21 +191,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="project-item col-md-4" id="NOBORU">
+                <div class="project-item col-md-4" id="3dsCookieClicker">
                     <div class="card mb-4 shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                        <defs>
-                            <filter id="blur" x="0" y="0">
-                                <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
-                            </filter>
-                        </defs>
-                        <image preserveAspectRatio="xMidYMid slice" xlink:href="https://github.com/Creckeryop/NOBORU/raw/master/res/logo.png" width="100%" height="250" filter="url(#blur)"/> 
-                        <image preserveAspectRatio="xMidYMid meet" xlink:href="https://github.com/Creckeryop/NOBORU/raw/master/res/logo.png" width="100%" height="250"/> 
+                        <image preserveAspectRatio="xMidYMid slice" xlink:href="https://github.com/Creckeryop/3dsCookieClicker/raw/master/logo.png" width="100%" height="250" filter="url(#blur)"/> 
+                        <image preserveAspectRatio="xMidYMid meet" xlink:href="https://github.com/Creckeryop/3dsCookieClicker/raw/master/logo.png" width="100%" height="250"/> 
                     </svg>
                         <h5 class="card-header">
-                            NOBORU
+                            3DS Cookie Clicker
                         </h5>
                         <div class="card-body pb-0">
                             <div class="row">
@@ -193,20 +217,56 @@
                                     <label class="download-counter">0</label>
                                 </div>
                                 <div class="column3">
-                                    <label class="project-language"></label>
+                                    <label class="project-language">Lua</label>
                                 </div>
                             </div>
-                            <p>Приложние для чтения манги на PlayStation Vita™</p>
+                            <p>Клон известного кликера для Nintendo 3DS™</p>
                         </div>
                         <div class="card-body text-right pt-0">
-                            <a class="btn btn-outline-dark" href="https://github.com/Creckeryop/NOBORU">Перейти на GitHub</a>
+                            <a class="btn btn-outline-dark" href="https://github.com/Creckeryop/3dsCookieClicker">Перейти на GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item col-md-4" id="CookieClicker-Vita">
+                    <div class="card mb-4 shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                        <image preserveAspectRatio="xMidYMid slice" xlink:href="https://github.com/Creckeryop/CookieClicker-Vita/raw/master/logo.png" width="100%" height="250" filter="url(#blur)"/> 
+                        <image preserveAspectRatio="xMidYMid meet" xlink:href="https://github.com/Creckeryop/CookieClicker-Vita/raw/master/logo.png" width="100%" height="250"/> 
+                    </svg>
+                        <h5 class="card-header">
+                            Cookie Clicker Vita
+                        </h5>
+                        <div class="card-body pb-0">
+                            <div class="row">
+                                <div class="column3">
+                                    <svg width="1.5em" height="1.5em" viewBox="0 3 20 20" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.612 17.443c-.386.198-.824-.149-.746-.592l.83-4.73-3.522-3.356c-.33-.314-.16-.888.282-.95l4.898-.696 2.184-4.327c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L10 15.187l-4.389 2.256z"></path>
+                                    </svg>
+                                    <label class="star-counter">0</label>
+                                </div>
+                                <div class="column3">
+                                    <svg width="1.5em" height="1.5em" viewBox="0 3 20 20" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M2.5 10a.5.5 0 01.5.5V14a1 1 0 001 1h12a1 1 0 001-1v-3.5a.5.5 0 011 0V14a2 2 0 01-2 2H4a2 2 0 01-2-2v-3.5a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd" d="M7 9.5a.5.5 0 01.707 0L10 11.793 12.293 9.5a.5.5 0 01.707.707l-2.646 2.647a.5.5 0 01-.708 0L7 10.207A.5.5 0 017 9.5z" clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd" d="M10 3a.5.5 0 01.5.5v8a.5.5 0 01-1 0v-8A.5.5 0 0110 3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <label class="download-counter">0</label>
+                                </div>
+                                <div class="column3">
+                                    <label class="project-language">Lua</label>
+                                </div>
+                            </div>
+                            <p>Клон известного кликера для PlayStation Vita™</p>
+                        </div>
+                        <div class="card-body text-right pt-0">
+                            <a class="btn btn-outline-dark" href="https://github.com/Creckeryop/CookieClicker-Vita">Перейти на GitHub</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="text-center card shadow">
-            Creckeryop
+        <footer class="text-center card shadow" style="font-size:12px;">
+            site developed by creckeryop
         </footer>
         <script src="js/jquery-latest.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
