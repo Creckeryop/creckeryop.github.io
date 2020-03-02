@@ -77,7 +77,8 @@
                             <p>Приложние для чтения манги на PlayStation Vita™</p>
                         </div>
                         <div class="card-body text-right pt-0">
-                            <a class="btn btn-outline-dark" href="https://github.com/Creckeryop/NOBORU">Перейти на GitHub</a>
+                            <a class="btn btn-link" data-toggle="modal" href="#NOBORUAbout">Подробнее</a>
+                            <a class="btn offset-1 btn-outline-dark" href="https://github.com/Creckeryop/NOBORU">Перейти на GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -113,7 +114,8 @@
                             <p>Игра в жанре головоломки на PlayStation Vita™</p>
                         </div>
                         <div class="card-body text-right pt-0">
-                            <a class="btn btn-outline-dark" href="https://github.com/Creckeryop/PiCrest">Перейти на GitHub</a>
+                            <a class="btn btn-link" data-toggle="modal" href="#PiCrestAbout">Подробнее</a>
+                            <a class="btn offset-1 btn-outline-dark" href="https://github.com/Creckeryop/PiCrest">Перейти на GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -149,7 +151,8 @@
                             <p>Игра сапёр для PlayStation Vita™</p>
                         </div>
                         <div class="card-body text-right pt-0">
-                            <a class="btn btn-outline-dark" href="https://github.com/Creckeryop/MSweep">Перейти на GitHub</a>
+                            <a class="btn btn-link" data-toggle="modal" href="#MSweepAbout">Подробнее</a>
+                            <a class="btn offset-1 btn-outline-dark" href="https://github.com/Creckeryop/MSweep">Перейти на GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -270,67 +273,186 @@
         </div>
     </main>
     <div class="modals">
-        <div>
-            <div class="modal fade" id="FlappyBirdAbout" tabindex="-1" role="dialog" aria-labelledby="Flappy Bird" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-ku" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="Flappy Bird">Flappy Bird</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal fade" id="NOBORUAbout" tabindex="-1" role="dialog" aria-labelledby="NOBORU" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-ku" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="NOBORU">NOBORU</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
-                        </div>
-                        <div class="modal-body">
-                            <b>Описание:</b>
-                            <p>Данный проект был написан в целях проверки своих навыков программирования на языке С++<br>Для написания проекта понадобилось изучить следующие материалы:</p>
-                            <ul>
-                                <li>
-                                    <a href="https://en.wikipedia.org/wiki/Hyperplane_separation_theorem#Use_in_collision_detection">The Seperating Axis Theorem</a> - Коллизия объектов
-                                </li>
-                                <li>
-                                    <a href="https://www.metanetsoftware.com/dev/tutorials">Metanet Software Tutorials</a> - SAT коллизия на примерах
-                                </li>
-                                <li>
-                                    <a href="https://docs.vitasdk.org">VitaSDK</a> - Документация функций из модулей PS Vita
-                                </li>
-                                <li>
-                                    <a href="https://github.com/xerpi/libvita2d">libvita2d</a> - Графическая библиотека для PS Vita
-                                </li>
-                            </ul>
-                            <b>Скриншоты:</b><br>
-                            <img src="https://github.com/Creckeryop/Flappy-Bird-Classic-vita/raw/master/screenshots/screenshots.gif" width="100%">
-                        </div>
-                        <div class="modal-footer">
-                            <a type="button" class="btn btn-link" href="https://github.com/Creckeryop/Flappy-Bird-Classic-vita">Перейти на GitHub репозиторий проекта</a>
-                            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
-                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <b>Описание:</b>
+                        <p>Данный проект был написан на LUA с собственным модифицированным Lua Player Plus написанным на C++/C<br>Для написания проекта понадобилось изучить следующие материалы:</p>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/LuaDist/libjpeg">libjpeg</a>/<a href="http://www.libpng.org/pub/png/libpng.html">libpng</a>/<a href="https://ru.wikipedia.org/wiki/BMP">BMP</a> - Библиотеки для чтения разных форматов изображений
+                            </li>
+                            <li>
+                                <a href="https://curl.haxx.se/libcurl/c/">libcurl</a> - API cURL для C (Бесплатная лёгкая библиотека для URL операций)
+                            </li>
+                            <li>
+                                <a href="https://docs.vitasdk.org">VitaSDK</a> - Документация функций из модулей PS Vita
+                            </li>
+                            <li>
+                                <a href="https://github.com/xerpi/libvita2d">libvita2d</a> - Графическая библиотека для PS Vita
+                            </li>
+                        </ul>
+                        <p>В процессе создания, поддержки проекта:</p>
+                        <ul>
+                            <li>
+                                Создан <a href="https://github.com/Creckeryop/piclib">piclib</a> - набор функций для загрузки изображений в качестве GXM текстуры, в отличии от стандартных функций <a href="https://github.com/xerpi/libvita2d">libvita2d</a>,
+                                piclib позволяет загрузить часть картинки, для обхода лимитов GXM (4096x4096), в NOBORU эти функции используются для загрузки части страниц комиксов отдельно, что улучшило читаемость страниц.
+                            </li>
+                            <li>
+                                Изменен <a href="https://github.com/Creckeryop/lpp-vita">lpp-vita</a> - Lua Player Plus, были добавлены:<br>
+                                <ul>
+                                    <li>
+                                        Указание куки файлов для http(s) запросов
+                                    </li>
+                                    <li>
+                                        Указание http заголовков для http(s) запросов
+                                    </li>
+                                    <li>
+                                        Возможность удаления/установки/проверки приложений (в NOBORU присутствует автообновление)
+                                    </li>
+                                    <li>
+                                        Возможность загружать части изображения <a href="https://github.com/Creckeryop/piclib">piclib</a>
+                                    </li>
+                                    <li>
+                                        Возможность загружать изображение/части изображений асинхронно
+                                    </li>
+                                    <li>
+                                        Возможность чтения состава zip архивов, для последующего извлечения указанных файлов из архива
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Благодаря пользователям сообщества PlayStation Vita, были созданы переводы на: Испанский, Вьетнамский.
+                            </li>
+                        </ul>
+                        <b>Скриншоты:</b><br>
+                        <img src="https://github.com/Creckeryop/NOBORU/raw/master/res/screenshots.gif" width="100%">
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-link" href="https://github.com/Creckeryop/NOBORU">Перейти на GitHub репозиторий проекта</a>
+                        <a type="button" class="btn btn-outline-danger" href="https://www.reddit.com/r/vitahacks/comments/eycx8t/noboru_release/">Страница на Reddit</a>
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div>
-            <div class="modal fade" id="CookieClicker3dsAbout" tabindex="-1" role="dialog" aria-labelledby="3DS Cookie Clicker" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-ku" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="3DS Cookie Clicker">3DS Cookie Clicker</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal fade" id="PiCrestAbout" tabindex="-1" role="dialog" aria-labelledby="PiCrest" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-ku" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="PiCrest">PiCrest</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
+                    </div>
+                    <div class="modal-body">
+                        <b>Описание:</b>
+                        <p>Данный проект был написан на LUA с использованием Lua Player Plus для PS Vita<br>
+                            <a href="http://rinnegatamante.github.io/lpp-vita/">Документация Lua Player Plus для PlayStation Vita™</a></p>
+                        <b>Скриншоты:</b><br>
+                        <img src="https://github.com/Creckeryop/PiCrest/raw/master/screenshots/screenshots.gif" width="100%">
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-link" href="https://github.com/Creckeryop/PiCrest">Перейти на GitHub репозиторий проекта</a>
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="MSweepAbout" tabindex="-1" role="dialog" aria-labelledby="MSweep" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-ku" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="MSweep">MSweep</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <b>Описание:</b>
+                        <p>Данный проект был написан в целях проверки своих навыков программирования на языке С++<br>Для написания проекта понадобилось изучить следующие материалы:</p>
+                        <ul>
+                            <li>
+                                <a href="https://docs.vitasdk.org">VitaSDK</a> - Документация функций из модулей PS Vita
+                            </li>
+                            <li>
+                                <a href="https://github.com/xerpi/libvita2d">libvita2d</a> - Графическая библиотека для PS Vita
+                            </li>
+                        </ul>
+                        <b>Скриншоты:</b><br>
+                        <img src="https://github.com/Creckeryop/MSweep/raw/master/screenshots/screenshots.gif" width="100%">
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-link" href="https://github.com/Creckeryop/MSweep">Перейти на GitHub репозиторий проекта</a>
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="FlappyBirdAbout" tabindex="-1" role="dialog" aria-labelledby="Flappy Bird" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-ku" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="Flappy Bird">Flappy Bird</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <b>Описание:</b>
+                        <p>Данный проект был написан в целях проверки своих навыков программирования на языке С++<br>Для написания проекта понадобилось изучить следующие материалы:</p>
+                        <ul>
+                            <li>
+                                <a href="https://en.wikipedia.org/wiki/Hyperplane_separation_theorem#Use_in_collision_detection">The Seperating Axis Theorem</a> - Коллизия объектов
+                            </li>
+                            <li>
+                                <a href="https://www.metanetsoftware.com/dev/tutorials">Metanet Software Tutorials</a> - SAT коллизия на примерах
+                            </li>
+                            <li>
+                                <a href="https://docs.vitasdk.org">VitaSDK</a> - Документация функций из модулей PS Vita
+                            </li>
+                            <li>
+                                <a href="https://github.com/xerpi/libvita2d">libvita2d</a> - Графическая библиотека для PS Vita
+                            </li>
+                        </ul>
+                        <b>Скриншоты:</b><br>
+                        <img src="https://github.com/Creckeryop/Flappy-Bird-Classic-vita/raw/master/screenshots/screenshots.gif" width="100%">
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-link" href="https://github.com/Creckeryop/Flappy-Bird-Classic-vita">Перейти на GitHub репозиторий проекта</a>
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="CookieClicker3dsAbout" tabindex="-1" role="dialog" aria-labelledby="3DS Cookie Clicker" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-ku" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="3DS Cookie Clicker">3DS Cookie Clicker</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <b>Описание:</b>
+                        <p>Данный проект является моей первой опубликованной игрой с использованием языка LUA<br>
+                            <a href="https://rinnegatamante.it/lpp-3ds_doc.html">Документация Lua Player Plus для 3DS</a></p>
+                        <b>Запись игры:</b><br>
+                        <div style="text-align: center;">
+                            <img src="https://github.com/Creckeryop/3dsCookieClicker/raw/master/record.gif">
                         </div>
-                        <div class="modal-body">
-                            <b>Описание:</b>
-                            <p>Данный проект является моей первой опубликованной игрой с использованием языка LUA<br>
-                                <a href="https://rinnegatamante.it/lpp-3ds_doc.html">Документация Lua Player Plus для 3DS</a></p>
-                            <b>Запись игры:</b><br>
-                            <div style="text-align: center;">
-                                <img src="https://github.com/Creckeryop/3dsCookieClicker/raw/master/record.gif">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <a type="button" class="btn btn-link" href="https://github.com/Creckeryop/3dsCookieClicker">Перейти на GitHub репозиторий проекта</a>
-                            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
-                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-link" href="https://github.com/Creckeryop/3dsCookieClicker">Перейти на GitHub репозиторий проекта</a>
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
                     </div>
                 </div>
             </div>
