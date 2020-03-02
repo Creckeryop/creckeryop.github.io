@@ -3,3 +3,8 @@
     -webkit-backdrop-filter: saturate(180%) blur(14px);
     backdrop-filter: saturate(180%) blur(14px);
 }
+
+.column2 {
+    padding-left: 5%;
+    width: 40%;
+}
