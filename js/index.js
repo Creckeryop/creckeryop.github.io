@@ -1,99 +1,54 @@
-function getStars(repo_name, item, index) {
-    $.ajax({
-        url: "https://api.github.com/repos/creckeryop/" + repo_name,
-        type: "GET",
-        complete: function(jqXHR, status) {
-            if (status == "success") {
-                var result = jqXHR.responseText;
-                var trimmed = result.substring(0, result.lastIndexOf('"watchers_count": '));
-                var trimmed2 = trimmed.substring(trimmed.lastIndexOf('"stargazers_count": '), trimmed.lastIndexOf(","));
-                item[index] = trimmed2.substring(trimmed2.lastIndexOf(':') + 1);
-            }
-        }
-    });
-}
-
-var language_table = {
+let language_table = {
     ["Lua"]: "blue",
     ["C++"]: "red",
     ["JavaScript"]: "yellow"
 };
 
-function getLanguage(repo_name, item, index) {
+function loadProjectInfo(repo, item) {
+    let star_label = item.getElementsByClassName("star-counter").item(0);
+    let lngg_label = item.getElementsByClassName("project-language").item(0);
     $.ajax({
-        url: "https://api.github.com/repos/creckeryop/" + repo_name,
+        url: "https://api.github.com/repos/creckeryop/" + repo,
         type: "GET",
         complete: function(jqXHR, status) {
             if (status == "success") {
-                var result = jqXHR.responseText;
-                var trimmed = result.substring(0, result.lastIndexOf('"has_issues": '));
-                var trimmed2 = trimmed.substring(trimmed.lastIndexOf('"language": '), trimmed.lastIndexOf('",'));
-                item[index] = trimmed2.substring(trimmed2.lastIndexOf(':') + 3);
-                item.style.color = language_table[item[index]] || "black";
+                let result = jqXHR.responseText;
+                star_label.innerHTML = /watchers_count": (.+),/.exec(result)[1];
+                lngg_label.innerHTML = /language": "(.+)",/.exec(result)[1];
+                lngg_label.style.color = language_table[lngg_label.innerHTML] || "black";
             }
         }
     });
-}
-
-function getDownloads(repo_name, item, index) {
+    let dwld_label = item.getElementsByClassName("download-counter").item(0);
     $.ajax({
-        url: "https://api.github.com/repos/creckeryop/" + repo_name + "/releases",
+        url: "https://api.github.com/repos/creckeryop/" + repo + "/releases",
         type: "GET",
         complete: function(jqXHR, status) {
             if (status == "success") {
-                var count = 0
-                var result = jqXHR.responseText;
-                var splits = result.split("\n");
-                for (i = 0; i < splits.length; i++) {
-                    var line = splits[i];
+                let count = 0;
+                let result = jqXHR.responseText;
+                let splits = result.split("\n");
+                let i = 0;
+                for (; i < splits.length; i++) {
+                    let line = splits[i];
                     if (line.indexOf("download_count") >= 0) {
-                        var c = parseInt(line.substring(line.indexOf(":") + 2, line.indexOf(",")));
+                        let c = parseInt(line.substring(line.indexOf(":") + 2, line.indexOf(",")));
                         count = count + c;
                     }
                 }
-                item[index] = count;
+                dwld_label.innerHTML = count;
             }
         }
     });
 }
 
-function get(repo_name, item, index) {
-    $.ajax({
-        url: "https://api.github.com/repos/creckeryop/" + repo_name + "/releases",
-        type: "GET",
-        complete: function(jqXHR, status) {
-            if (status == "success") {
-                var count = 0
-                var result = jqXHR.responseText;
-                var splits = result.split("\n");
-                for (i = 0; i < splits.length; i++) {
-                    var line = splits[i];
-                    if (line.indexOf("download_count") >= 0) {
-                        var c = parseInt(line.substring(line.indexOf(":") + 2, line.indexOf(",")));
-                        count = count + c;
-                    }
-                }
-                item[index] = count;
-            }
-        }
-    });
+function loadProjectsInfo() {
+    let items = document.getElementsByClassName("project-item");
+    let i = 0;
+    for (; i < items.length; i++) {
+        let item = items.item(i);
+        loadProjectInfo(item.id, item);
+    }
 }
 
-var star_counters = document.getElementsByClassName("star-counter");
-for (i = 0; i < star_counters.length; i++) {
-    var item = star_counters.item(i);
-    var repo_name = item.id.substring(0, item.id.lastIndexOf("-"));
-    getStars(repo_name, item, "innerHTML");
-}
-var dwld_counters = document.getElementsByClassName("download-counter");
-for (i = 0; i < dwld_counters.length; i++) {
-    var item = dwld_counters.item(i);
-    var repo_name = item.id.substring(0, item.id.lastIndexOf("-"));
-    getDownloads(repo_name, item, "innerHTML");
-}
-var lngg_counters = document.getElementsByClassName("project-language");
-for (i = 0; i < lngg_counters.length; i++) {
-    var item = lngg_counters.item(i);
-    var repo_name = item.id.substring(0, item.id.lastIndexOf("-"));
-    getLanguage(repo_name, item, "innerHTML");
-}
+loadProjectsInfo();

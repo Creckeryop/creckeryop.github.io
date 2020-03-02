@@ -1,5 +1,5 @@
 .site-nav {
-    background-color: rgba(20, 20, 20, 0.85);
+    background-color: rgba(20, 20, 20, 0.80);
     -webkit-backdrop-filter: saturate(180%) blur(14px);
     backdrop-filter: saturate(180%) blur(14px);
 }
@@ -15,6 +15,9 @@ label {
     font-size: 20px;
 }
 
+
+/*
+.project-item {}
 body {
     background: rgba(233, 236, 239, 1)
-}
+}*/
