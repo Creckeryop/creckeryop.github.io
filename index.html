@@ -160,7 +160,7 @@
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
                         <image preserveAspectRatio="xMidYMid slice" xlink:href="https://raw.githubusercontent.com/Creckeryop/Flappy-Bird-Classic-vita/master/sce_sys/icon0.png" width="100%" height="250" filter="url(#blur)"/> 
                         <image preserveAspectRatio="xMidYMid meet" xlink:href="https://raw.githubusercontent.com/Creckeryop/Flappy-Bird-Classic-vita/master/sce_sys/icon0.png" width="100%" height="250"/> 
-                    </svg>
+                        </svg>
                         <h5 class="card-header">
                             Flappy Bird Classic
                         </h5>
@@ -186,8 +186,9 @@
                             </div>
                             <p>Клон известного таймкиллера для PlayStation Vita™</p>
                         </div>
-                        <div class="card-body text-right pt-0">
-                            <a class="btn btn-outline-dark" href="https://github.com/Creckeryop/Flappy-Bird-Classic-vita">Перейти на GitHub</a>
+                        <div class="card-body pt-0">
+                            <a class="btn btn-link" data-toggle="modal" href="#FlappyBirdAbout">Подробнее</a>
+                            <a class="btn offset-1 btn-outline-dark" href="https://github.com/Creckeryop/Flappy-Bird-Classic-vita">Перейти на GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -222,8 +223,9 @@
                             </div>
                             <p>Клон известного кликера для Nintendo 3DS™</p>
                         </div>
-                        <div class="card-body text-right pt-0">
-                            <a class="btn btn-outline-dark" href="https://github.com/Creckeryop/3dsCookieClicker">Перейти на GitHub</a>
+                        <div class="card-body pt-0">
+                            <a class="btn btn-link" data-toggle="modal" href="#CookieClicker3dsAbout">Подробнее</a>
+                            <a class="btn offset-1 btn-outline-dark" href="https://github.com/Creckeryop/3dsCookieClicker">Перейти на GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -259,8 +261,101 @@
                             <p>Клон известного кликера для PlayStation Vita™</p>
                         </div>
                         <div class="card-body text-right pt-0">
-                            <a class="btn btn-outline-dark" href="https://github.com/Creckeryop/CookieClicker-Vita">Перейти на GitHub</a>
+                            <a class="btn btn-link" data-toggle="modal" href="#CookieClickerVitaAbout">Подробнее</a>
+                            <a class="btn offset-1 btn-outline-dark" href="https://github.com/Creckeryop/CookieClicker-Vita">Перейти на GitHub</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modals">
+        <div>
+            <div class="modal fade" id="FlappyBirdAbout" tabindex="-1" role="dialog" aria-labelledby="Flappy Bird" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-ku" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="Flappy Bird">Flappy Bird</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                        </div>
+                        <div class="modal-body">
+                            <b>Описание:</b>
+                            <p>Данный проект был написан в целях проверки своих навыков программирования на языке С++<br>Для написания проекта понадобилось изучить следующие материалы:</p>
+                            <ul>
+                                <li>
+                                    <a href="https://en.wikipedia.org/wiki/Hyperplane_separation_theorem#Use_in_collision_detection">The Seperating Axis Theorem</a> - Коллизия объектов
+                                </li>
+                                <li>
+                                    <a href="https://www.metanetsoftware.com/dev/tutorials">Metanet Software Tutorials</a> - SAT коллизия на примерах
+                                </li>
+                                <li>
+                                    <a href="https://docs.vitasdk.org">VitaSDK</a> - Документация функций из модулей PS Vita
+                                </li>
+                                <li>
+                                    <a href="https://github.com/xerpi/libvita2d">libvita2d</a> - Графическая библиотека для PS Vita
+                                </li>
+                            </ul>
+                            <b>Скриншоты:</b><br>
+                            <img src="https://github.com/Creckeryop/Flappy-Bird-Classic-vita/raw/master/screenshots/screenshots.gif" width="100%">
+                        </div>
+                        <div class="modal-footer">
+                            <a type="button" class="btn btn-link" href="https://github.com/Creckeryop/Flappy-Bird-Classic-vita">Перейти на GitHub репозиторий проекта</a>
+                            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="modal fade" id="CookieClicker3dsAbout" tabindex="-1" role="dialog" aria-labelledby="3DS Cookie Clicker" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-ku" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="3DS Cookie Clicker">3DS Cookie Clicker</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                        </div>
+                        <div class="modal-body">
+                            <b>Описание:</b>
+                            <p>Данный проект является моей первой опубликованной игрой с использованием языка LUA<br>
+                                <a href="https://rinnegatamante.it/lpp-3ds_doc.html">Документация Lua Player Plus для 3DS</a></p>
+                            <b>Запись игры:</b><br>
+                            <div style="text-align: center;">
+                                <img src="https://github.com/Creckeryop/3dsCookieClicker/raw/master/record.gif">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a type="button" class="btn btn-link" href="https://github.com/Creckeryop/3dsCookieClicker">Перейти на GitHub репозиторий проекта</a>
+                            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="CookieClickerVitaAbout" tabindex="-1" role="dialog" aria-labelledby="Cookie Clicker Vita" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-ku" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="Cookie Clicker Vita">Cookie Clicker Vita</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <b>Описание:</b>
+                        <p>Проект Cookie Clicker для PlayStation Vita™<br>
+                            <a href="http://rinnegatamante.github.io/lpp-vita/">Документация Lua Player Plus для PlayStation Vita™</a></p>
+                        <b>Скриншот:</b><br>
+                        <div style="text-align: center;">
+                            <img src="https://github.com/Creckeryop/CookieClicker-Vita/raw/master/screenshot.jpg" width="100%">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-link" href="https://github.com/Creckeryop/CookieClicker-Vita">Перейти на GitHub репозиторий проекта</a>
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
                     </div>
                 </div>
             </div>
@@ -271,7 +366,6 @@
         <script src="js/jquery-latest.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/index.js?v={random number/string}"></script>
-    </main>
 </body>
 
 </html>

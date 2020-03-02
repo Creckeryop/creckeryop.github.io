@@ -19,6 +19,11 @@ label {
     padding-top: 80px;
 }
 
+.modal-ku {
+    width: 750px;
+    margin-top: 10vh;
+}
+
 
 /*
 .project-item {}
