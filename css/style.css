@@ -1,0 +1,5 @@
+.site-nav {
+    background-color: rgba(20, 20, 20, 0.85);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    backdrop-filter: saturate(180%) blur(14px);
+}
