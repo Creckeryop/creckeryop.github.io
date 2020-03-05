@@ -1,6 +1,7 @@
 let language_table = {
     ["Lua"]: "blue",
     ["C++"]: "red",
+    ["C#"]: "orange",
     ["JavaScript"]: "yellow"
 };
 
@@ -44,6 +45,12 @@ function loadProjectsInfo() {
     for (; i < items.length; i++) {
         let item = items.item(i);
         loadProjectInfo(item.id, item);
+        let lng_label = item.getElementsByClassName("project-language").item(0);
+        lng_label.style.color = language_table[lng_label.innerHTML] || "black";
+    }
+    items = document.getElementsByClassName("lab-item");
+    for (i = 0; i < items.length; i++) {
+        let item = items.item(i);
         let lng_label = item.getElementsByClassName("project-language").item(0);
         lng_label.style.color = language_table[lng_label.innerHTML] || "black";
     }

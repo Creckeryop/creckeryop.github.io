@@ -27,6 +27,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">Проекты</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#labs">Лабораторные</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -63,7 +66,7 @@
                     <a href="https://github.com/creckeryop" class="btn btn-outline-dark" style="font-size: 14px;"><img src="https://github.com/favicon.ico" alt="GitHub" width="16" style="padding-bottom:3px; margin-right: 3px;">GitHub</a>
                     <a href="https://twitter.com/trash_cookie" class="btn btn-outline-dark" style="font-size: 14px;"><img src="https://twitter.com/favicon.ico" alt="Twitter" style="padding-bottom:3px; margin-right: 3px;">Twitter</a>
                     <a href="https://vk.com/creckeryop" class="btn btn-outline-dark" style="font-size: 14px;"><img src="https://vk.com/favicon.ico" alt="Вконтакте" style="padding-bottom:3px; margin-right: 3px;">ВКонтакте</a>
-                    <a href="https://steamcommunity.com/id/Creckeryop" class="btn btn-outline-dark" style="font-size: 14px;"><img src="https://steamcommunity.com/favicon.ico" width="16" alt="Steam" style="padding-bottom:3px; margin-right: 3px;">Steam</a>
+                    <!--a href="https://steamcommunity.com/id/Creckeryop" class="btn btn-outline-dark" style="font-size: 14px;"><img src="https://steamcommunity.com/favicon.ico" width="16" alt="Steam" style="padding-bottom:3px; margin-right: 3px;">Steam</a-->
                     <a href="mailto:didager@yandex.ru" class="btn btn-outline-dark" style="display: inline-block; font-size: 14px;"><img src="https://mail.yandex.ru/favicon.ico" alt="Mail" width="16" style="padding-bottom:3px; margin-right: 3px;">didager@yandex.ru</a>
                 </div>
             </div>
@@ -553,12 +556,81 @@
                 </div>
             </div>
         </div>
-        <footer class="text-center card shadow" style="font-size:12px;">
-            site developed by creckeryop
-        </footer>
-        <script src="js/jquery-latest.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/index.js?v={random number/string}"></script>
+    </div>
+    <h2 class="text-center pb-4"><a class="anchor" id="labs">Лабораторные</a></h2>
+    <div class="container">
+        <div class="row">
+            <div class="lab-item col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                    <image preserveAspectRatio="xMidYMid slice" xlink:href="https://github.com/Creckeryop/my-labs/raw/master/IGraphicsLab/logo.png" width="100%" height="250" filter="url(#blur)"/> 
+                    <image preserveAspectRatio="xMidYMid meet" xlink:href="https://github.com/Creckeryop/my-labs/raw/master/IGraphicsLab/logo.png" width="100%" height="250"/> 
+                </svg>
+                    <h5 class="card-header">
+                        ЛР по Инженерной Графике
+                    </h5>
+                    <div class="card-body pb-0">
+                        <div class="row">
+                            <div class="column3">
+                            </div>
+                            <div class="column3">
+                                <label class="project-language">C#</label>
+                            </div>
+                        </div>
+                        <p>Лабораторная работа по Инженерной Графике. Изометрическая отрисовка 3D Графики.</p>Факультативно:
+                        <li>Перспективная проекция</li>
+                        <li>ZBuffer</li>
+                        <li>Текстуры</li>
+                        <li>Освещение</li>
+                        </p>
+                    </div>
+                    <div class="card-body text-right pt-0">
+                        <a class="btn btn-link" data-toggle="modal" href="#IGLABAbout">Подробнее</a>
+                        <a class="btn offset-1 btn-outline-dark" href="https://github.com/Creckeryop/my-labs/tree/master/IGraphicsLab">Перейти на GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modals">
+        <div class="modal fade" id="IGLABAbout" tabindex="-1" role="dialog" aria-labelledby="IGLab" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-ku" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="IGLab">Лабораторная работа по Инженерной Графике</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <b>Описание:</b>
+                        <p>Данная лабораторная работа была написана на C# без помощи сторонних библиотек для отрисовки 3D.</p>
+                        <p>Лабораторная работа заключалась в создании изометрической проекции 3D фигур на проекционную плоскость, для усложения (из-за интереса к предмету) заменена задача отрисовки изометрической графики на перспективную, также добавлены
+                            следующие задачи: реализация Z буфера, интерполяция текстур на различные плоскости, создание освещения.</p>Для создания лабораторной работы помогли следующие материалы:
+                        <ul>
+                            <li><a href="http://compgraph.tpu.ru/Oglavlenie.htm">compograph.tpu.ru</a> - "Компьютерная графика" А.Ю. Дёмин А.В. Кудинов</li>
+                            <li><a href="https://en.wikipedia.org/wiki/Z-buffering">Wikipedia Z-buffering</a> - Описание Z-Буфферизации на википедии</li>
+                            <li><a href="https://en.wikipedia.org/wiki/Back-face_culling">Wikipedia BackFace Culling</a> - Алгоритм пропуска отрисовки невидимых плоскостей объекта</li>
+                        </ul>
+                        <b>Видео:</b><br>
+                        <div class="text-center">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/klf277-Qk5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-link" href="https://github.com/Creckeryop/my-labs/tree/master/IGraphicsLab">Перейти в папку GitHub с лабораторной работой</a>
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center card shadow" style="font-size:12px;">
+        site developed by creckeryop
+    </footer>
+    <script src="js/jquery-latest.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js?v={random number/string}"></script>
 </body>
 
 </html>
