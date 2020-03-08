@@ -18,17 +18,17 @@
             <a class="navbar-brand ml-3" href="#top">Creckeryop</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
+            </button>
             <div class="navbar-collapse collapse" id="navbarCollapse" style>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#info">Информация</a>
+                        <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#info">Информация</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Проекты</a>
+                        <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#projects">Проекты</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#labs">Лабораторные</a>
+                        <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#labs">Лабораторные</a>
                     </li>
                 </ul>
             </div>
@@ -58,10 +58,10 @@
     <main role="main">
         <div style="background-image: url('bg.jpg');
         background-attachment: fixed;
-        background-position: center; padding-bottom: 20px; margin-bottom: 20px;">
-            <div class="jumbotron text-center pb-4 pt-4">
-                <p class="display-4">Creckeryop</p>
-                <p class="mb-3">Страница разработчика</p>
+        background-position: center; padding-bottom: 20px;">
+            <div class="bg-white text-center pb-4 pt-4">
+                <h1 class="display-4">Creckeryop</h1>
+                <p>Страница разработчика</p>
                 <div class="btn-group btn-group-sm col-9 mb-0">
                     <a href="https://github.com/creckeryop" class="btn btn-outline-dark" style="font-size: 14px;"><img src="https://github.com/favicon.ico" alt="GitHub" width="16" style="padding-bottom:3px; margin-right: 3px;">GitHub</a>
                     <a href="https://twitter.com/trash_cookie" class="btn btn-outline-dark" style="font-size: 14px;"><img src="https://twitter.com/favicon.ico" alt="Twitter" style="padding-bottom:3px; margin-right: 3px;">Twitter</a>
@@ -70,10 +70,8 @@
                     <a href="mailto:didager@yandex.ru" class="btn btn-outline-dark" style="display: inline-block; font-size: 14px;"><img src="https://mail.yandex.ru/favicon.ico" alt="Mail" width="16" style="padding-bottom:3px; margin-right: 3px;">didager@yandex.ru</a>
                 </div>
             </div>
-            <h2 class="text-center pb-4">
-                <a class="anchor text-white" id="info">Информация</a>
-            </h2>
-            <div class="container">
+            <div class="anchor container" id="info">
+                <h2 class="text-center text-white pt-4 pb-4">Информация</h2>
                 <div class="row">
                     <div class="col-md-4 pb-4">
                         <div class="card shadow-sm">
@@ -107,8 +105,8 @@
                 </div>
             </div>
         </div>
-        <h2 class="text-center pb-4"><a class="anchor" id="projects">Проекты</a></h2>
-        <div class="container">
+        <div class="container anchor" id="projects">
+            <h2 class="text-center pt-4 pb-4">Проекты</h2>
             <div class="row">
                 <div class="project-item col-md-4" id="NOBORU">
                     <div class="card mb-4 shadow-sm">
@@ -557,8 +555,8 @@
             </div>
         </div>
     </div>
-    <h2 class="text-center pb-4"><a class="anchor" id="labs">Лабораторные</a></h2>
-    <div class="container">
+    <div class="container anchor" id="labs">
+        <h2 class="text-center pt-4 pb-4">Лабораторные</h2>
         <div class="row">
             <div class="lab-item col-md-4">
                 <div class="card mb-4 shadow-sm">
