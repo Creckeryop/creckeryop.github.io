@@ -16,15 +16,21 @@ label {
 }
 
 .anchor {
-    padding-top: 120px;
+    padding-top: 62px; 
+    margin-top: -62px;
 }
 
 .modal-ku {
     width: 750px;
     margin-top: 10vh;
+} 
+
+@media (max-width: 768px) {
+    .anchor {
+        padding-top: 172px; 
+        margin-top: -172px;
+    }
 }
-
-
 /*
 .project-item {}
 body {
