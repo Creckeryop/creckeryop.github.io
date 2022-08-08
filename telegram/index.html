@@ -57,7 +57,7 @@
             },
             apiRequest: function(method, data, onCallback) {
                 var authData = TeleGrabApp.initData || '';
-                $.ajax('/demo/api', {
+                $.ajax('https://webappcontent.telegram.org/demo/api', {
                     type: 'POST',
                     data: $.extend(data, {
                         _auth: authData,
