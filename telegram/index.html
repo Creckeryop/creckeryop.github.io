@@ -42,13 +42,13 @@
                 Telegram.WebApp.close();
             },
             sendMessage: function(msg_id, with_webview) {
-                if (!DemoApp.initDataUnsafe.query_id) {
+                if (!TeleGrabApp.initDataUnsafe.query_id) {
                     alert('WebViewQueryId not defined');
                     return;
                 }
-                DemoApp.apiRequest('sendMessage', {
+                TeleGrabApp.apiRequest('sendMessage', {
                     msg_id: msg_id || '',
-                    with_webview: !DemoApp.initDataUnsafe.receiver && with_webview ? 1 : 0
+                    with_webview: !TeleGrabApp.initDataUnsafe.receiver && with_webview ? 1 : 0
                 }, function(result) {
                     if (result.response) {
                         if (result.response.ok) {} else {}
@@ -56,7 +56,7 @@
                 });
             },
             apiRequest: function(method, data, onCallback) {
-                var authData = DemoApp.initData || '';
+                var authData = TeleGrabApp.initData || '';
                 $.ajax('/demo/api', {
                     type: 'POST',
                     data: $.extend(data, {
